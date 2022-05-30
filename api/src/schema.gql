@@ -1,0 +1,28 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Job {
+  id: String!
+  title: String!
+}
+
+type Query {
+  jobs: [Job!]!
+  job(id: String!): Job!
+}
+
+type Mutation {
+  createJob(createJobInput: CreateJobInput!): Job!
+  updateJob(updateJobInput: UpdateJobInput!): Job!
+  removeJob(id: String!): Job!
+}
+
+input CreateJobInput {
+  title: String!
+}
+
+input UpdateJobInput {
+  title: String
+  id: String!
+}
